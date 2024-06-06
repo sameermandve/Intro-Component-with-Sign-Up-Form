@@ -1,0 +1,218 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  /* Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Success-Border: hsl(154, 57%, 33%);
+
+  /* Accent */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --White: white;
+
+  /* Shadow */
+  --Dark-Blue-shadow: hsla(249, 10%, 26%, 0.3);
+  --Green-shadow: hsl(154, 64%, 37%);
+  --Green-hover: hsla(154, 59%, 51%, 0.8);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--Red);
+  background-image: url(images/bg-intro-desktop.png);
+}
+
+#left-section {
+  padding: 0 3rem 0 7rem;
+}
+
+#info-container {
+  margin-top: 35%;
+}
+
+#info-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: var(--White);
+}
+
+#info-container p {
+  font-weight: 400;
+  color: var(--White);
+  line-height: 1.5rem;
+}
+
+#right-section {
+  padding: 0 1rem;
+  padding-right: 8rem;
+  margin-top: 12%;
+}
+
+span {
+  font-weight: 600;
+}
+
+#top-part {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--Blue);
+  color: var(--White);
+  border-radius: 10px;
+  font-weight: 300;
+  box-shadow: 0 5px 1px var(--Dark-Blue-shadow);
+  margin-bottom: 1.5rem;
+}
+
+#top-part:hover {
+  cursor: pointer;
+}
+
+/* Form Container Part */
+
+.hidden {
+  display: none;
+}
+
+#form {
+  padding: 1.5rem;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.input-control input {
+  padding: 0.8rem 1.25rem;
+  border-radius: 8px;
+  border: 2px solid var(--Grayish-Blue);
+  border-style: solid;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input-control.error input {
+  border-color: var(--Red);
+}
+
+.input-control.success input {
+  border-color: var(--Success-Border);
+}
+
+.input-control input:focus {
+  outline: none;
+}
+
+.input-control input::-webkit-input-placeholder {
+  font-weight: 500;
+}
+
+.error-msg {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  text-align: end;
+  color: var(--Red);
+}
+
+.error-img {
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+#bottom-part {
+  margin-bottom: 0.5rem;
+}
+
+#bottom-part button {
+  appearance: none;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--Green);
+  color: var(--White);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 1px var(--Green-shadow);
+  margin-bottom: 0.8rem;
+}
+
+#bottom-part button:hover {
+  cursor: pointer;
+  background-color: var(--Green-hover);
+}
+
+#bottom-part p {
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  margin-bottom: 0.5rem;
+}
+
+#bottom-part p a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--Red);
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/bg-intro-mobile.png);
+    padding: 1.25rem;
+  }
+
+  #left-section {
+    padding: 0;
+  }
+
+  #info-container {
+    margin: 0;
+    text-align: center;
+  }
+
+  #info-container h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  #info-container p {
+    padding: 0 1.5rem;
+  }
+
+  #right-section {
+    padding-right: 1rem;
+  }
+
+  #bottom-part button {
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  #bottom-part p {
+    margin: 0 3rem;
+  }
+}
